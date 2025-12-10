@@ -1,0 +1,69 @@
+{
+  "title": "TypeScript Advanced Concepts",
+  "description": "Challenge yourself with advanced TypeScript concepts including generics, utility types, and type guards.",
+  "category": "typescript",
+  "difficulty": "advanced",
+  "tags": ["generics", "utility-types", "type-guards"],
+  "questions": [
+    {
+      "question": "¿Qué hace el utility type 'Partial<T>' en TypeScript?",
+      "options": [
+        "Convierte todas las propiedades de T en opcionales",
+        "Selecciona solo algunas propiedades de T",
+        "Convierte todas las propiedades de T en readonly",
+        "Elimina propiedades duplicadas de T"
+      ],
+      "correctAnswer": "Convierte todas las propiedades de T en opcionales",
+      "explanation": "Partial<T> crea un nuevo tipo donde todas las propiedades del tipo T son opcionales.",
+      "points": 15
+    },
+    {
+      "question": "¿Cuál es la sintaxis correcta para definir un generic constraint en TypeScript?",
+      "options": [
+        "function foo<T implements Object>(arg: T) {}",
+        "function foo<T extends Object>(arg: T) {}",
+        "function foo<T: Object>(arg: T) {}",
+        "function foo<T = Object>(arg: T) {}"
+      ],
+      "correctAnswer": "function foo<T extends Object>(arg: T) {}",
+      "explanation": "Los generic constraints en TypeScript se definen usando la palabra clave 'extends' después del parámetro de tipo.",
+      "points": 15
+    },
+    {
+      "question": "¿Qué es un 'type predicate' en TypeScript?",
+      "options": [
+        "Un tipo que valida datos en runtime",
+        "Una función que retorna un boolean con type narrowing",
+        "Un tipo condicional que filtra propiedades",
+        "Un decorador de tipos"
+      ],
+      "correctAnswer": "Una función que retorna un boolean con type narrowing",
+      "explanation": "Un type predicate (como 'arg is Type') es una función type guard que ayuda a TypeScript a estrechar el tipo en tiempo de compilación.",
+      "points": 20
+    },
+    {
+      "question": "¿Cuál es la diferencia entre 'unknown' y 'any'?",
+      "options": [
+        "No hay diferencia, son alias",
+        "unknown requiere type checking antes de usar el valor, any no",
+        "unknown solo acepta primitivos, any acepta todo",
+        "any es más seguro que unknown"
+      ],
+      "correctAnswer": "unknown requiere type checking antes de usar el valor, any no",
+      "explanation": "'unknown' es type-safe: debes hacer type checking antes de usar el valor. 'any' deshabilita completamente el type checking.",
+      "points": 15
+    },
+    {
+      "question": "¿Qué hace el utility type 'ReturnType<T>'?",
+      "options": [
+        "Define el tipo de retorno de una función",
+        "Extrae el tipo de retorno de un tipo de función",
+        "Valida que una función retorne un tipo específico",
+        "Convierte el retorno de una función en Promise"
+      ],
+      "correctAnswer": "Extrae el tipo de retorno de un tipo de función",
+      "explanation": "ReturnType<T> es un utility type que extrae el tipo de retorno de un tipo de función T.",
+      "points": 15
+    }
+  ]
+}

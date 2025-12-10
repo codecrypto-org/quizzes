@@ -1,0 +1,69 @@
+{
+  "title": "Solidity Fundamentals",
+  "description": "Learn the basics of Solidity smart contract development including data types, functions, and contract structure.",
+  "category": "solidity",
+  "difficulty": "beginner",
+  "tags": ["smart-contracts", "ethereum", "basics"],
+  "questions": [
+    {
+      "question": "¿Cuál es la versión pragma correcta para especificar que un contrato usa Solidity 0.8.0 o superior?",
+      "options": [
+        "pragma solidity >=0.8.0;",
+        "pragma solidity ^0.8.0;",
+        "version solidity 0.8.0;",
+        "solidity version >=0.8.0;"
+      ],
+      "correctAnswer": "pragma solidity ^0.8.0;",
+      "explanation": "El símbolo ^ permite versiones 0.8.0 y superiores pero menores a 0.9.0. >= permitiría cualquier versión superior.",
+      "points": 10
+    },
+    {
+      "question": "¿Qué modificador de visibilidad hace que una función sea accesible solo desde dentro del contrato?",
+      "options": [
+        "public",
+        "external",
+        "private",
+        "internal"
+      ],
+      "correctAnswer": "private",
+      "explanation": "'private' restringe el acceso solo al contrato actual. 'internal' permite acceso desde contratos derivados también.",
+      "points": 10
+    },
+    {
+      "question": "¿Cuál es el tipo de dato para almacenar direcciones de Ethereum en Solidity?",
+      "options": [
+        "string",
+        "address",
+        "bytes32",
+        "uint160"
+      ],
+      "correctAnswer": "address",
+      "explanation": "El tipo 'address' está diseñado específicamente para almacenar direcciones de Ethereum (20 bytes).",
+      "points": 10
+    },
+    {
+      "question": "¿Qué hace la palabra clave 'payable' en una función?",
+      "options": [
+        "Permite que la función reciba Ether",
+        "Hace que la función sea gratuita de ejecutar",
+        "Convierte la función en una transacción",
+        "Permite que la función envíe Ether"
+      ],
+      "correctAnswer": "Permite que la función reciba Ether",
+      "explanation": "'payable' permite que una función reciba Ether cuando es llamada. Sin esta palabra clave, la transacción será rechazada si se envía Ether.",
+      "points": 15
+    },
+    {
+      "question": "¿Cuál es la diferencia entre 'memory' y 'storage' en Solidity?",
+      "options": [
+        "memory es permanente, storage es temporal",
+        "storage es permanente en blockchain, memory es temporal",
+        "No hay diferencia, son sinónimos",
+        "memory es más costoso que storage"
+      ],
+      "correctAnswer": "storage es permanente en blockchain, memory es temporal",
+      "explanation": "'storage' se refiere a datos persistentes en la blockchain, mientras que 'memory' es temporal y existe solo durante la ejecución de la función.",
+      "points": 15
+    }
+  ]
+}

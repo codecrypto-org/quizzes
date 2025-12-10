@@ -1,0 +1,69 @@
+{
+  "title": "Docker Basics",
+  "description": "Master the fundamentals of Docker including containers, images, and basic commands.",
+  "category": "docker",
+  "difficulty": "beginner",
+  "tags": ["containers", "images", "basics"],
+  "questions": [
+    {
+      "question": "¿Cuál es la diferencia entre una imagen y un contenedor en Docker?",
+      "options": [
+        "Son lo mismo, solo diferentes nombres",
+        "Una imagen es la plantilla, un contenedor es la instancia en ejecución",
+        "Un contenedor es más grande que una imagen",
+        "Una imagen es temporal, un contenedor es permanente"
+      ],
+      "correctAnswer": "Una imagen es la plantilla, un contenedor es la instancia en ejecución",
+      "explanation": "Una imagen es como una clase en programación (plantilla), mientras que un contenedor es como una instancia (objeto en ejecución).",
+      "points": 10
+    },
+    {
+      "question": "¿Qué comando se usa para descargar una imagen de Docker Hub?",
+      "options": [
+        "docker download",
+        "docker pull",
+        "docker get",
+        "docker fetch"
+      ],
+      "correctAnswer": "docker pull",
+      "explanation": "'docker pull' descarga una imagen desde un registry (como Docker Hub) al sistema local.",
+      "points": 10
+    },
+    {
+      "question": "¿Qué hace el comando 'docker run -d'?",
+      "options": [
+        "Ejecuta el contenedor en modo debug",
+        "Ejecuta el contenedor en modo detached (background)",
+        "Ejecuta el contenedor y lo elimina después",
+        "Ejecuta el contenedor en modo desarrollo"
+      ],
+      "correctAnswer": "Ejecuta el contenedor en modo detached (background)",
+      "explanation": "La flag '-d' (detached) ejecuta el contenedor en segundo plano, liberando la terminal.",
+      "points": 10
+    },
+    {
+      "question": "¿Cuál es el propósito del archivo Dockerfile?",
+      "options": [
+        "Configurar la red de Docker",
+        "Definir las instrucciones para construir una imagen",
+        "Listar todos los contenedores",
+        "Configurar volúmenes persistentes"
+      ],
+      "correctAnswer": "Definir las instrucciones para construir una imagen",
+      "explanation": "El Dockerfile contiene las instrucciones paso a paso para construir una imagen de Docker.",
+      "points": 10
+    },
+    {
+      "question": "¿Qué comando se usa para ver los contenedores en ejecución?",
+      "options": [
+        "docker list",
+        "docker show",
+        "docker ps",
+        "docker containers"
+      ],
+      "correctAnswer": "docker ps",
+      "explanation": "'docker ps' muestra los contenedores en ejecución. 'docker ps -a' muestra todos los contenedores (incluyendo los detenidos).",
+      "points": 10
+    }
+  ]
+}

@@ -1,0 +1,69 @@
+{
+  "title": "Docker Advanced Techniques",
+  "description": "Advanced Docker concepts including multi-stage builds, networking, and optimization strategies.",
+  "category": "docker",
+  "difficulty": "advanced",
+  "tags": ["multi-stage", "networking", "optimization"],
+  "questions": [
+    {
+      "question": "¿Cuál es el beneficio principal de los multi-stage builds en Docker?",
+      "options": [
+        "Ejecutar múltiples contenedores simultáneamente",
+        "Reducir el tamaño de la imagen final al separar build y runtime",
+        "Mejorar la velocidad de construcción",
+        "Permitir múltiples versiones de la aplicación"
+      ],
+      "correctAnswer": "Reducir el tamaño de la imagen final al separar build y runtime",
+      "explanation": "Los multi-stage builds permiten usar una imagen para compilar y otra más ligera para ejecutar, reduciendo significativamente el tamaño final.",
+      "points": 20
+    },
+    {
+      "question": "¿Qué tipo de red Docker permite que los contenedores se comuniquen usando nombres de servicio?",
+      "options": [
+        "bridge",
+        "host",
+        "none",
+        "overlay"
+      ],
+      "correctAnswer": "bridge",
+      "explanation": "En una red bridge (la default), Docker proporciona DNS interno que permite que los contenedores se descubran por nombre.",
+      "points": 15
+    },
+    {
+      "question": "¿Qué hace la instrucción 'HEALTHCHECK' en un Dockerfile?",
+      "options": [
+        "Escanea la imagen en busca de vulnerabilidades",
+        "Define un comando para verificar si el contenedor está funcionando correctamente",
+        "Optimiza el rendimiento del contenedor",
+        "Verifica la sintaxis del Dockerfile"
+      ],
+      "correctAnswer": "Define un comando para verificar si el contenedor está funcionando correctamente",
+      "explanation": "HEALTHCHECK define un comando que Docker ejecuta periódicamente para verificar el estado del contenedor.",
+      "points": 15
+    },
+    {
+      "question": "¿Cuál es la diferencia entre 'CMD' y 'ENTRYPOINT' en un Dockerfile?",
+      "options": [
+        "No hay diferencia práctica",
+        "CMD define el comando default, ENTRYPOINT define el ejecutable principal",
+        "ENTRYPOINT es más rápido que CMD",
+        "CMD es deprecated, se debe usar ENTRYPOINT"
+      ],
+      "correctAnswer": "CMD define el comando default, ENTRYPOINT define el ejecutable principal",
+      "explanation": "ENTRYPOINT configura el ejecutable principal del contenedor, mientras que CMD proporciona argumentos por defecto que pueden ser sobrescritos.",
+      "points": 20
+    },
+    {
+      "question": "¿Qué es Docker layer caching y cómo se optimiza?",
+      "options": [
+        "Un sistema de backup de contenedores",
+        "Reutilización de capas no modificadas; optimiza ordenando instrucciones de menos a más cambiantes",
+        "Una técnica de compresión de imágenes",
+        "Un método de cifrado de datos"
+      ],
+      "correctAnswer": "Reutilización de capas no modificadas; optimiza ordenando instrucciones de menos a más cambiantes",
+      "explanation": "Docker cachea cada capa de una imagen. Para optimizar, coloca instrucciones que cambian poco (como dependencias) antes que las que cambian frecuentemente (como código fuente).",
+      "points": 20
+    }
+  ]
+}

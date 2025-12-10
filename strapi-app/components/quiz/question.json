@@ -1,0 +1,29 @@
+{
+  "collectionName": "components_quiz_questions",
+  "info": {
+    "name": "Question",
+    "description": "Quiz question with multiple choice options"
+  },
+  "options": {},
+  "attributes": {
+    "question": {
+      "type": "text",
+      "required": true
+    },
+    "options": {
+      "type": "json",
+      "required": true
+    },
+    "correctAnswer": {
+      "type": "string",
+      "required": true
+    },
+    "explanation": {
+      "type": "text"
+    },
+    "points": {
+      "type": "integer",
+      "default": 10
+    }
+  }
+}

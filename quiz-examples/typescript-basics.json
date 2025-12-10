@@ -1,0 +1,69 @@
+{
+  "title": "TypeScript Basics",
+  "description": "Test your knowledge of TypeScript fundamentals, including types, interfaces, and basic syntax.",
+  "category": "typescript",
+  "difficulty": "beginner",
+  "tags": ["types", "interfaces", "basics"],
+  "questions": [
+    {
+      "question": "¿Cuál es la forma correcta de declarar una variable con tipo string en TypeScript?",
+      "options": [
+        "let name: string = 'John';",
+        "let name = string('John');",
+        "string name = 'John';",
+        "let name as string = 'John';"
+      ],
+      "correctAnswer": "let name: string = 'John';",
+      "explanation": "En TypeScript, los tipos se declaran después del nombre de la variable usando dos puntos (:) seguido del tipo.",
+      "points": 10
+    },
+    {
+      "question": "¿Qué tipo de TypeScript representa un valor que puede ser de cualquier tipo?",
+      "options": [
+        "any",
+        "unknown",
+        "object",
+        "all"
+      ],
+      "correctAnswer": "any",
+      "explanation": "El tipo 'any' permite que una variable tenga cualquier tipo, deshabilitando efectivamente el type checking para esa variable.",
+      "points": 10
+    },
+    {
+      "question": "¿Cuál es la diferencia principal entre 'interface' y 'type' en TypeScript?",
+      "options": [
+        "No hay diferencia, son completamente intercambiables",
+        "Interface puede ser extendida y fusionada, type no puede ser fusionado",
+        "Type solo funciona con primitivos, interface con objetos",
+        "Interface es más lenta en tiempo de compilación"
+      ],
+      "correctAnswer": "Interface puede ser extendida y fusionada, type no puede ser fusionado",
+      "explanation": "Las interfaces pueden ser extendidas y fusionadas (declaration merging), mientras que los types son más flexibles para uniones e intersecciones pero no pueden ser fusionados.",
+      "points": 15
+    },
+    {
+      "question": "¿Qué hace el operador '?' después del nombre de una propiedad en TypeScript?",
+      "options": [
+        "Marca la propiedad como readonly",
+        "Marca la propiedad como opcional",
+        "Marca la propiedad como nullable",
+        "Marca la propiedad como private"
+      ],
+      "correctAnswer": "Marca la propiedad como opcional",
+      "explanation": "El operador '?' indica que una propiedad es opcional, lo que significa que puede estar presente o no en el objeto.",
+      "points": 10
+    },
+    {
+      "question": "¿Cuál es el tipo de retorno correcto para una función que no retorna ningún valor?",
+      "options": [
+        "null",
+        "undefined",
+        "void",
+        "never"
+      ],
+      "correctAnswer": "void",
+      "explanation": "El tipo 'void' se usa para funciones que no retornan un valor. 'never' se usa para funciones que nunca retornan (como las que lanzan errores).",
+      "points": 10
+    }
+  ]
+}

@@ -1,0 +1,81 @@
+{
+  "title": "Docker Compose & Multi-Container Apps",
+  "description": "Test your knowledge of Docker Compose for orchestrating multi-container applications.",
+  "category": "docker",
+  "difficulty": "intermediate",
+  "tags": ["docker-compose", "orchestration", "multi-container"],
+  "questions": [
+    {
+      "question": "¿Cuál es el propósito principal de Docker Compose?",
+      "options": [
+        "Compilar aplicaciones dentro de contenedores",
+        "Orquestar múltiples contenedores como una aplicación",
+        "Comprimir imágenes de Docker",
+        "Crear backups de contenedores"
+      ],
+      "correctAnswer": "Orquestar múltiples contenedores como una aplicación",
+      "explanation": "Docker Compose permite definir y ejecutar aplicaciones multi-contenedor usando un archivo YAML de configuración.",
+      "points": 10
+    },
+    {
+      "question": "¿Qué archivo usa Docker Compose por defecto para su configuración?",
+      "options": [
+        "docker-config.yml",
+        "docker-compose.yaml",
+        "compose.yml",
+        "docker.yml"
+      ],
+      "correctAnswer": "docker-compose.yaml",
+      "explanation": "Docker Compose busca por defecto los archivos 'docker-compose.yml' o 'docker-compose.yaml'.",
+      "points": 10
+    },
+    {
+      "question": "¿Qué comando inicia todos los servicios definidos en docker-compose.yml?",
+      "options": [
+        "docker-compose start",
+        "docker-compose run",
+        "docker-compose up",
+        "docker-compose create"
+      ],
+      "correctAnswer": "docker-compose up",
+      "explanation": "'docker-compose up' construye, (re)crea, inicia y adjunta contenedores para todos los servicios.",
+      "points": 10
+    },
+    {
+      "question": "¿Qué hace la directiva 'depends_on' en docker-compose.yml?",
+      "options": [
+        "Define el orden de construcción de imágenes",
+        "Especifica dependencias entre servicios para el orden de inicio",
+        "Lista las dependencias npm del proyecto",
+        "Define qué servicios son opcionales"
+      ],
+      "correctAnswer": "Especifica dependencias entre servicios para el orden de inicio",
+      "explanation": "'depends_on' define el orden en que los servicios deben iniciarse, aunque no espera a que estén 'ready'.",
+      "points": 15
+    },
+    {
+      "question": "¿Cuál es la diferencia entre 'volumes' y 'bind mounts' en Docker Compose?",
+      "options": [
+        "No hay diferencia, son sinónimos",
+        "Volumes son gestionados por Docker, bind mounts mapean directorios del host",
+        "Bind mounts son más rápidos que volumes",
+        "Volumes solo funcionan en Linux"
+      ],
+      "correctAnswer": "Volumes son gestionados por Docker, bind mounts mapean directorios del host",
+      "explanation": "Los volumes son gestionados completamente por Docker, mientras que los bind mounts mapean directorios específicos del sistema host.",
+      "points": 15
+    },
+    {
+      "question": "¿Qué hace 'docker-compose down -v'?",
+      "options": [
+        "Detiene los servicios en modo verbose",
+        "Detiene y elimina contenedores, redes y volúmenes",
+        "Valida el archivo docker-compose.yml",
+        "Muestra la versión de docker-compose"
+      ],
+      "correctAnswer": "Detiene y elimina contenedores, redes y volúmenes",
+      "explanation": "La flag '-v' indica que también se deben eliminar los volúmenes además de contenedores y redes.",
+      "points": 15
+    }
+  ]
+}

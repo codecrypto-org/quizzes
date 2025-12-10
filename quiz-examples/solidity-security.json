@@ -1,0 +1,69 @@
+{
+  "title": "Solidity Security Best Practices",
+  "description": "Test your knowledge of security vulnerabilities and best practices in Solidity smart contract development.",
+  "category": "solidity",
+  "difficulty": "intermediate",
+  "tags": ["security", "vulnerabilities", "best-practices"],
+  "questions": [
+    {
+      "question": "¿Qué es un ataque de reentrancy?",
+      "options": [
+        "Cuando un contrato llama a sí mismo múltiples veces",
+        "Cuando un contrato malicioso llama de vuelta al contrato vulnerable antes de que termine",
+        "Cuando se intenta entrar a un contrato privado",
+        "Cuando se ejecuta una función más de una vez"
+      ],
+      "correctAnswer": "Cuando un contrato malicioso llama de vuelta al contrato vulnerable antes de que termine",
+      "explanation": "Un ataque de reentrancy ocurre cuando un contrato externo llama de vuelta a la función original antes de que complete, potencialmente drenando fondos.",
+      "points": 15
+    },
+    {
+      "question": "¿Cuál es el patrón correcto para prevenir reentrancy attacks?",
+      "options": [
+        "Usar 'private' en todas las funciones",
+        "Checks-Effects-Interactions pattern",
+        "Usar 'pure' functions únicamente",
+        "Evitar llamadas externas"
+      ],
+      "correctAnswer": "Checks-Effects-Interactions pattern",
+      "explanation": "El patrón Checks-Effects-Interactions establece: 1) Validar condiciones, 2) Actualizar estado, 3) Interactuar con contratos externos.",
+      "points": 20
+    },
+    {
+      "question": "¿Qué problema de seguridad puede causar el uso de 'tx.origin' para autenticación?",
+      "options": [
+        "Es más costoso en gas que msg.sender",
+        "Vulnerabilidad a phishing attacks",
+        "No funciona con wallets de hardware",
+        "Es deprecated en versiones nuevas"
+      ],
+      "correctAnswer": "Vulnerabilidad a phishing attacks",
+      "explanation": "'tx.origin' retorna el emisor original de la transacción. Un contrato malicioso puede engañar a usuarios para que inicien transacciones que pasen esta validación.",
+      "points": 20
+    },
+    {
+      "question": "¿Qué hace el modificador 'nonReentrant' en OpenZeppelin?",
+      "options": [
+        "Previene que una función sea llamada recursivamente",
+        "Hace que la función sea más eficiente en gas",
+        "Previene reentrancy attacks",
+        "Bloquea llamadas externas"
+      ],
+      "correctAnswer": "Previene reentrancy attacks",
+      "explanation": "El modificador 'nonReentrant' de OpenZeppelin usa un mutex para prevenir que la función sea llamada nuevamente mientras aún está ejecutándose.",
+      "points": 15
+    },
+    {
+      "question": "¿Qué es un 'integer overflow' y cómo se previene en Solidity 0.8+?",
+      "options": [
+        "Cuando un número excede su límite; no se previene",
+        "Cuando se divide por cero; se previene con checks",
+        "Cuando un número excede su límite; se previene automáticamente",
+        "Cuando se usa el tipo incorrecto; se previene con casting"
+      ],
+      "correctAnswer": "Cuando un número excede su límite; se previene automáticamente",
+      "explanation": "A partir de Solidity 0.8.0, los integer overflows/underflows causan que la transacción revierta automáticamente, sin necesidad de SafeMath.",
+      "points": 15
+    }
+  ]
+}

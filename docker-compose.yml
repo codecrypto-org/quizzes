@@ -1,0 +1,32 @@
+services:
+  strapi:
+    image: strapi/strapi:latest
+    container_name: strapi2
+    restart: unless-stopped
+    environment:
+      # Database configuration
+      DATABASE_CLIENT: postgres
+      DATABASE_HOST: host.docker.internal
+      DATABASE_PORT: 5432
+      DATABASE_NAME: strapi2
+      DATABASE_USERNAME: postgres
+      DATABASE_PASSWORD: postgres
+      DATABASE_SSL: false
+
+      # Admin JWT
+      APP_KEYS: ${APP_KEYS:-toBeModified1,toBeModified2}
+      API_TOKEN_SALT: ${API_TOKEN_SALT:-toBeModified}
+      ADMIN_JWT_SECRET: ${ADMIN_JWT_SECRET:-toBeModified}
+      TRANSFER_TOKEN_SALT: ${TRANSFER_TOKEN_SALT:-toBeModified}
+      JWT_SECRET: ${JWT_SECRET:-toBeModified}
+
+      # Server
+      HOST: 0.0.0.0
+      PORT: 1337
+      NODE_ENV: development
+    ports:
+      - '1338:1337'
+    volumes:
+      - ./strapi-app:/srv/app
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
